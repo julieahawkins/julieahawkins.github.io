@@ -1,7 +1,7 @@
 export const setThemeClass = (theme, className) => {
   const newClass = theme === 'dark'
     ? `${className} dark`
-    : `${className}`
+    : `${className}`;
 
   return newClass;
-}
+};

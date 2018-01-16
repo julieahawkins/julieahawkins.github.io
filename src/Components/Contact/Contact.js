@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { setThemeClass } from '../../helpers/helper';
 
 const Contact = ({ theme }) => {
   const displayForm = () => {
-    console.log('email form would pop up')
-    alert('email form would pop up')
-  }
+    console.log('email form would pop up');
+    alert('email form would pop up');
+  };
 
   return (
     <div className='Contacts'>
@@ -26,7 +27,11 @@ const Contact = ({ theme }) => {
         <div className={setThemeClass(theme, 'linkedIn')}></div>
       </a>
     </div>
-  )
-}
+  );
+};
+
+Contact.propTypes = {
+  theme: PropTypes.string
+};
 
 export default Contact;

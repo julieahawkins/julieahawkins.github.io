@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { setThemeClass } from '../../helpers/helper';
-// import Moth from '../Moth/Moth';
 
 class Nav extends Component {
   constructor(props) {
@@ -27,8 +27,8 @@ class Nav extends Component {
     this.setState({ angle });
   }
 
-  handleHover = (e) => {
-    const conditional = (e.target.id === 'toProjects');
+  handleHover = (event) => {
+    const conditional = (event.target.id === 'toProjects');
 
     this.setAngle(conditional);
   }
@@ -50,7 +50,7 @@ class Nav extends Component {
   addNavBarClass = (className) => {
     const newClass = this.props.navBar
       ? `${className} navBar`
-      : `${className}`
+      : `${className}`;
 
     return newClass;
   }
@@ -93,8 +93,14 @@ class Nav extends Component {
           Resume
         </NavLink>
       </nav>
-    )
+    );
   }
 }
+
+Nav.propTypes = {
+  navBar: PropTypes.bool,
+  theme: PropTypes.string,
+  pageName: PropTypes.string
+};
 
 export default Nav;
