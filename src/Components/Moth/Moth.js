@@ -12,8 +12,8 @@ class Moth extends Component {
 
   render() {
     const mothStyle = this.props.theme === 'light' 
-      ? require('../assets/moth.png')
-      : require('../assets/moth-glow.png')
+      ? require('../../assets/moth.png')
+      : require('../../assets/moth-glow.png')
 
     return (
       <img 

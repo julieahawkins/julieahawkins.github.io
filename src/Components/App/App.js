@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router';
-import Nav from './Nav/Nav';
-import './styles/AppThemes.css';
+import '../../styles/AppThemes.css';
+import Nav from '../Nav/Nav';
   
 class App extends Component {
   constructor() {
