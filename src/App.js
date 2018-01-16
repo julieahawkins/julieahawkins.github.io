@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import Nav from './Nav/Nav';
-
-import './styles/lightTheme.css';
-// import './styles/darkTheme.css';
+import './styles/AppThemes.css';
   
-
 class App extends Component {
   constructor() {
     super();
@@ -31,9 +28,18 @@ class App extends Component {
     this.setState({ theme });
   }
 
+  displayForm = () => {
+    console.log('email form would pop up')
+    alert('email form would pop up')
+  }
+
   render() {
+    const dark = this.state.theme === 'light' 
+      ? null
+      : 'dark';
+
     return (
-      <div className='App'>
+      <div className={`App ${dark}`}>
         <Nav 
           theme={this.state.theme}
           angle={this.state.angle}
@@ -41,25 +47,29 @@ class App extends Component {
           handleHover={this.handleHover}
         />
 
-        <h1>Julie Hawkins</h1>
+        <h1 className={dark}>Julie Hawkins</h1>
 
         <div className='contact-wrapper'>
           <a 
             href='https://github.com/julieahawkins' 
             target='_blank' 
             rel='noopener noreferrer'>
-            <div className='github'></div>
+            <div className={`github ${dark}`}></div>
           </a>
+          <button
+            onClick={this.displayForm} 
+            className={`email ${dark}`}>
+          </button>
           <a 
             href='https://www.linkedin.com/in/julie-hawkins/' 
             target='_blank' 
             rel='noopener noreferrer'>
-            <div className='linkedIn'></div>
+            <div className={`linkedIn ${dark}`}></div>
           </a>
         </div>
 
         <div className='toggle-wrapper'>
-          <span id='toggle'>
+          <span id='toggle' className={dark}>
             <input type='checkbox' onChange={this.toggleTheme}/>
             <label data-on='dark' data-off='light'></label>
           </span>

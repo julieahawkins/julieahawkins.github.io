@@ -1,4 +1,4 @@
-/* Styles with out colors */
+/* Base layout, fonts and transitions */
 
 body {
   box-sizing: border-box;
@@ -13,6 +13,9 @@ body {
   justify-content: center;
   min-height: 100vh;
   text-align: center;
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition:  0.5s ease-out;
+  transition:  0.5s ease-out;
 }
 
 .Nav {
@@ -72,6 +75,9 @@ h1 {
   padding: 25px;
   margin: 25px;
   width: 600px;
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition:  0.5s ease-out;
+  transition:  0.5s ease-out;
 }
 
 .contact-wrapper {
@@ -82,22 +88,33 @@ h1 {
 
 .github {
   background-image: url('../assets/github.svg');
-  left: 80px;
+  left: 20px;
   &:hover {
     background-image: url('../assets/github-hover.svg')
   } 
 }
 
+.email {
+  background-color: transparent;
+  border: none;
+  background-image: url('../assets/email.svg');
+  right: 130px;
+  &:hover {
+    background-image: url('../assets/email-hover.svg')
+  } 
+}
+
 .linkedIn {
   background-image: url('../assets/linkedIn.svg');
-  right: 80px;
+  right: 20px;
   &:hover {
     background-image: url('../assets/linkedIn-hover.svg')
   } 
 }
 
 .github,
-.linkedIn {
+.linkedIn,
+.email {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
