@@ -12,7 +12,6 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  text-align: center;
   -webkit-transition: 0.5s ease-out;
   -moz-transition:  0.5s ease-out;
   transition:  0.5s ease-out;
@@ -26,17 +25,30 @@ body {
   width: 600px;
 }
 
+.Nav.navBar {
+  justify-content: center;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  width: 80%;
+}
+
 .nav-link {
   border-radius: 50px;
+  cursor: pointer;
   font-size: 20pt;
   font-weight: 100;
-  cursor: pointer;
+  text-decoration: none;
   padding: 10px;
   -webkit-transition: 1s ease-out;
   -moz-transition:  1s ease-out;
   transition:  1s ease-out;
 }
 
+.nav-link.navBar {
+  font-size: 16pt;
+  margin: 0 100px;
+}
 
 #Moth {
   height: 120px;
@@ -69,9 +81,23 @@ body {
   transform: rotateZ(90deg);
 }
 
+#Moth.navBar {
+  height: 80px;
+  width: 80px;
+  &:hover {
+    -webkit-transition: 2s ease-out;
+    -moz-transition:  2s ease-out;
+    transition:  2s ease-out;
+    -webkit-transform: rotateZ(-360deg);
+    -moz-transform: rotateZ(-360deg);
+    transform: rotateZ(-360deg);
+  }
+}
+
 h1 {
   font-size: 40pt;
   font-weight: 900;
+  text-align: center;
   padding: 25px;
   margin: 25px;
   width: 600px;
@@ -80,8 +106,14 @@ h1 {
   transition:  0.5s ease-out;
 }
 
-.contact-wrapper {
-  margin: 20px;
+.sub-title {
+  display: block;
+  font-size: 20pt;
+  margin: 0;
+}
+
+.Contacts {
+  margin-top: 130px;
   width: 300px;
   position: relative;
 }

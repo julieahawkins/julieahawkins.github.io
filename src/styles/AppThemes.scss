@@ -6,6 +6,10 @@
   background: $backgroundColor;
 }
 
+.Nav.navBar {
+  border-bottom: 2px solid $mainTextColor;
+}
+
 .nav-link {
   font-family: $fontStyle;
   color: $mainTextColor;
@@ -15,8 +19,23 @@
   }
 }
 
+.nav-link.active {
+  background: $transparentHoverColor;
+  color: $backgroundColor;
+  &:hover {
+    background: none;
+    box-shadow: 0 0 70px 15px $shadowColor;
+    color: $hoverColor;
+  }
+}
+
 h1 {
   border-bottom: 3px solid $mainTextColor;
+  color: $mainTextColor;
+  font-family: $fontStyle;
+}
+
+.sub-title {
   color: $mainTextColor;
   font-family: $fontStyle;
 }
@@ -65,9 +84,12 @@ h1.dark {
   color: $backgroundColor-Dark;
   font-family: $fontStyle;
   font-size: 70pt;
-  text-shadow: $shadowTextColor-Dark 0 0 30px;
   text-shadow: $shadowColor-Dark 0 0 30px;
   border: none;
+}
+
+.sub-title.dark {
+  color: $subTextColor-Dark;
 }
 
 .github.dark {

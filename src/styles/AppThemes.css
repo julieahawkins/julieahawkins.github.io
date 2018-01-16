@@ -8,6 +8,9 @@
 .App {
   background: #FAF9F6; }
 
+.Nav.navBar {
+  border-bottom: 2px solid #C9C9CD; }
+
 .nav-link {
   font-family: "Jura", monospace;
   color: #C9C9CD; }
@@ -15,8 +18,20 @@
     color: #877D78;
     box-shadow: 0 0 70px 15px rgba(201, 201, 205, 0.7); }
 
+.nav-link.active {
+  background: rgba(155, 145, 140, 0.7);
+  color: #FAF9F6; }
+  .nav-link.active:hover {
+    background: none;
+    box-shadow: 0 0 70px 15px rgba(201, 201, 205, 0.7);
+    color: #877D78; }
+
 h1 {
   border-bottom: 3px solid #C9C9CD;
+  color: #C9C9CD;
+  font-family: "Jura", monospace; }
+
+.sub-title {
   color: #C9C9CD;
   font-family: "Jura", monospace; }
 
@@ -53,9 +68,11 @@ h1.dark {
   color: #020C31;
   font-family: "Jura", monospace;
   font-size: 70pt;
-  text-shadow: rgba(255, 170, 104, 0.7) 0 0 30px;
   text-shadow: rgba(196, 241, 190, 0.7) 0 0 30px;
   border: none; }
+
+.sub-title.dark {
+  color: rgba(255, 170, 104, 0.4); }
 
 .github.dark {
   background-image: url("../assets/github-dark.svg"); }
