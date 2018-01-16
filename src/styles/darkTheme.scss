@@ -1,0 +1,63 @@
+@import './App.css';
+@import '../styles/variables.scss';
+
+.App {
+  background: $backgroundColor-Dark;
+}
+
+.Nav {
+  margin-bottom: 10px;
+}
+
+.nav-link {
+  font-family: $fontStyle;
+  color: $mainTextColor-Dark;
+  &:hover {
+    color: $hoverColor-Dark;
+    box-shadow: 0 0 70px 15px $shadowColor-Dark;
+  }
+}
+
+h1 {
+  border-bottom: 3px solid $mainTextColor-Dark;
+  color: $backgroundColor-Dark;
+  font-family: $fontStyle;
+  font-size: 70pt;
+  text-shadow: $shadowTextColor-Dark 0 0 30px;
+  text-shadow: $shadowColor-Dark 0 0 30px;
+  border: none;
+}
+
+.github {
+  background-image: url('../assets/github-dark.svg');
+  &:hover {
+    background-image: url('../assets/github-dark-hover.svg')
+  } 
+}
+
+.linkedIn {
+  background-image: url('../assets/linkedIn-dark.svg');
+  &:hover {
+    background-image: url('../assets/linkedIn-dark-hover.svg')
+  } 
+}
+
+.github,
+.linkedIn {
+  &:hover {
+    box-shadow: 0 0 70px 15px $shadowColor-Dark;
+  }
+}
+
+#toggle {
+  background-color: $mainTextColor-Dark;
+  label {
+    background-color: $hoverColor-Dark;
+    box-shadow: 0 0 20px 1px $shadowColor-Dark;
+    font-family: $fontStyle;
+    color: $toggleLight;
+  }
+  input:checked + label {
+    background-color: $toggleDark;
+  }
+}

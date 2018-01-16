@@ -1,7 +1,7 @@
 import React from 'react';
 import Moth from '../Moth/Moth';
 
-const Nav = ({ angle, handleHover, handleBlur }) => {
+const Nav = ({ angle, theme, handleHover, handleBlur }) => {
   return (
     <div className='Nav'>
       <span 
@@ -11,7 +11,10 @@ const Nav = ({ angle, handleHover, handleBlur }) => {
         className='nav-link'>
         Projects
       </span>
-      <Moth angle={angle}/>
+      <Moth 
+        angle={angle}
+        theme={theme}
+      />
       <span 
         onMouseOver={handleHover}
         onMouseOut={handleBlur}

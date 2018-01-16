@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import Nav from './Nav/Nav';
-import './styles/App.css';
+
+import './styles/lightTheme.css';
+// import './styles/darkTheme.css';
+  
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      angle: null
+      angle: null,
+      theme: 'light',
     };
   }
 
@@ -22,14 +26,16 @@ class App extends Component {
   }
 
   toggleTheme = (e) => {
-    console.log(e.target.checked)
-
+    console.log(e.target.checked);
+    const theme = !e.target.checked ? 'light' : 'dark';
+    this.setState({ theme });
   }
 
   render() {
     return (
       <div className='App'>
         <Nav 
+          theme={this.state.theme}
           angle={this.state.angle}
           handleBlur={this.handleBlur}
           handleHover={this.handleHover}
@@ -41,21 +47,21 @@ class App extends Component {
           <a 
             href='https://github.com/julieahawkins' 
             target='_blank' 
-            rel="noopener noreferrer">
-            <div id='github'></div>
+            rel='noopener noreferrer'>
+            <div className='github'></div>
           </a>
           <a 
             href='https://www.linkedin.com/in/julie-hawkins/' 
             target='_blank' 
-            rel="noopener noreferrer">
-            <div id='linkedIn'></div>
+            rel='noopener noreferrer'>
+            <div className='linkedIn'></div>
           </a>
         </div>
 
         <div className='toggle-wrapper'>
           <span id='toggle'>
-            <input type="checkbox" onChange={this.toggleTheme}/>
-            <label data-on="dark" data-off="light"></label>
+            <input type='checkbox' onChange={this.toggleTheme}/>
+            <label data-on='dark' data-off='light'></label>
           </span>
         </div>
 
