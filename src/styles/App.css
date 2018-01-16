@@ -1,4 +1,4 @@
-/* Styles with out colors */
+/* Base layout, fonts and transitions */
 body {
   box-sizing: border-box;
   margin: 0px;
@@ -10,7 +10,10 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  text-align: center; }
+  text-align: center;
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  transition: 0.5s ease-out; }
 
 .Nav {
   display: flex;
@@ -61,7 +64,10 @@ h1 {
   font-weight: 900;
   padding: 25px;
   margin: 25px;
-  width: 600px; }
+  width: 600px;
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  transition: 0.5s ease-out; }
 
 .contact-wrapper {
   margin: 20px;
@@ -70,18 +76,27 @@ h1 {
 
 .github {
   background-image: url("../assets/github.svg");
-  left: 80px; }
+  left: 20px; }
   .github:hover {
     background-image: url("../assets/github-hover.svg"); }
 
+.email {
+  background-color: transparent;
+  border: none;
+  background-image: url("../assets/email.svg");
+  right: 130px; }
+  .email:hover {
+    background-image: url("../assets/email-hover.svg"); }
+
 .linkedIn {
   background-image: url("../assets/linkedIn.svg");
-  right: 80px; }
+  right: 20px; }
   .linkedIn:hover {
     background-image: url("../assets/linkedIn-hover.svg"); }
 
 .github,
-.linkedIn {
+.linkedIn,
+.email {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -94,7 +109,8 @@ h1 {
   -moz-transition: 1s ease-out;
   transition: 1s ease-out; }
   .github:hover,
-  .linkedIn:hover {
+  .linkedIn:hover,
+  .email:hover {
     height: 50px;
     width: 50px;
     margin: -10px;

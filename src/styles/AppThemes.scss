@@ -1,15 +1,57 @@
 @import './App.css';
 @import '../styles/variables.scss';
 
+/* LIGHT THEME - default */
 .App {
-  background: $backgroundColor-Dark;
-}
-
-.Nav {
-  margin-bottom: 10px;
+  background: $backgroundColor;
 }
 
 .nav-link {
+  font-family: $fontStyle;
+  color: $mainTextColor;
+  &:hover {
+    color: $hoverColor;
+    box-shadow: 0 0 70px 15px $shadowColor;
+  }
+}
+
+h1 {
+  border-bottom: 3px solid $mainTextColor;
+  color: $mainTextColor;
+  font-family: $fontStyle;
+}
+
+.github,
+.linkedIn,
+.email {
+  &:hover {
+    box-shadow: 0 0 70px 15px $shadowColor;
+  }
+}
+
+#toggle {
+  background-color: $mainTextColor;
+  label {
+    background-color: $transparentHoverColor;
+    font-family: $fontStyle;
+    color: $toggleLight;
+  }
+  input:checked + label {
+    background-color: $toggleDark;
+  }
+}
+
+/* DARK THEME */
+
+.App.dark {
+  background: $backgroundColor-Dark;
+}
+
+.Nav.dark {
+  margin-bottom: 10px;
+}
+
+.nav-link.dark {
   font-family: $fontStyle;
   color: $mainTextColor-Dark;
   &:hover {
@@ -18,7 +60,7 @@
   }
 }
 
-h1 {
+h1.dark {
   border-bottom: 3px solid $mainTextColor-Dark;
   color: $backgroundColor-Dark;
   font-family: $fontStyle;
@@ -28,28 +70,36 @@ h1 {
   border: none;
 }
 
-.github {
+.github.dark {
   background-image: url('../assets/github-dark.svg');
   &:hover {
     background-image: url('../assets/github-dark-hover.svg')
   } 
 }
 
-.linkedIn {
+.email.dark {
+  background-image: url('../assets/email-dark.svg');
+  &:hover {
+    background-image: url('../assets/email-dark-hover.svg')
+  } 
+}
+
+.linkedIn.dark {
   background-image: url('../assets/linkedIn-dark.svg');
   &:hover {
     background-image: url('../assets/linkedIn-dark-hover.svg')
   } 
 }
 
-.github,
-.linkedIn {
+.github.dark,
+.linkedIn.dark
+.email.dark {
   &:hover {
     box-shadow: 0 0 70px 15px $shadowColor-Dark;
   }
 }
 
-#toggle {
+#toggle.dark {
   background-color: $mainTextColor-Dark;
   label {
     background-color: $hoverColor-Dark;
@@ -61,3 +111,5 @@ h1 {
     background-color: $toggleDark;
   }
 }
+
+
