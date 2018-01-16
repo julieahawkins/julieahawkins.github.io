@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Jura');
-@import url('https://fonts.googleapis.com/css?family=Macondo');
+/* Styles with out colors */
 
 body {
   box-sizing: border-box;
@@ -8,7 +7,6 @@ body {
 }
 
 .App {
-  background: #FAF9F6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +14,6 @@ body {
   min-height: 100vh;
   text-align: center;
 }
-
 
 .Nav {
   display: flex;
@@ -28,19 +25,13 @@ body {
 
 .nav-link {
   border-radius: 50px;
-  font-family: 'Jura', sans-serif;
   font-size: 20pt;
   font-weight: 100;
-  color: #C9C9CD;
   cursor: pointer;
   padding: 10px;
   -webkit-transition: 1s ease-out;
   -moz-transition:  1s ease-out;
   transition:  1s ease-out;
-  &:hover{
-    color: #877D78;
-    box-shadow: 0 0 70px 15px rgba(201, 201, 205, 0.7);
-  }
 }
 
 
@@ -76,9 +67,6 @@ body {
 }
 
 h1 {
-  border-bottom: 3px solid #C9C9CD;
-  color: #C9C9CD;
-  font-family: 'Jura', sans-serif;
   font-size: 40pt;
   font-weight: 900;
   padding: 25px;
@@ -92,7 +80,7 @@ h1 {
   position: relative;
 }
 
-#github {
+.github {
   background-image: url('../assets/github.svg');
   left: 80px;
   &:hover {
@@ -100,7 +88,7 @@ h1 {
   } 
 }
 
-#linkedIn {
+.linkedIn {
   background-image: url('../assets/linkedIn.svg');
   right: 80px;
   &:hover {
@@ -108,8 +96,8 @@ h1 {
   } 
 }
 
-#github,
-#linkedIn {
+.github,
+.linkedIn {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -122,7 +110,6 @@ h1 {
   -moz-transition:  1s ease-out;
   transition:  1s ease-out;
   &:hover {
-    box-shadow: 0 0 70px 15px rgba(201, 201, 205, 0.7);
     height: 50px;
     width: 50px;
     margin: -10px;
@@ -143,7 +130,6 @@ h1 {
   position: relative;
   text-align: left;
   width: 80px;
-  background-color: #C9C9CD;
   border-radius: 20px;
   margin: 10px;
   input {
@@ -155,15 +141,12 @@ h1 {
     z-index: 2;
   }
   label {
-    background-color: rgba(155, 145, 140, 0.7);
     border-radius: 50px;
     display: inline-block;
     width: 40px;
     text-align: center;
-    font-family: 'Jura', sans-serif;
     font-size: 12pt;
     font-weight: bold;
-    color: #FAF9F6;
     -webkit-transition: margin-left 0.2s ease-in-out;
     -moz-transition: margin-left 0.2s ease-in-out;
     transition: margin-left 0.2s ease-in-out;
@@ -177,7 +160,6 @@ h1 {
   }
 
   input:checked + label {
-    background-color: #008;
     margin-left: 20px;
   }
 }

@@ -1,0 +1,41 @@
+@import './App.css';
+@import '../styles/variables.scss';
+
+.App {
+  background: $backgroundColor;
+}
+
+.nav-link {
+  font-family: $fontStyle;
+  color: $mainTextColor;
+  &:hover {
+    color: $hoverColor;
+    box-shadow: 0 0 70px 15px $shadowColor;
+  }
+}
+
+h1 {
+  border-bottom: 3px solid $mainTextColor;
+  color: $mainTextColor;
+  font-family: $fontStyle;
+}
+
+.github,
+.linkedIn {
+
+  &:hover {
+    box-shadow: 0 0 70px 15px $shadowColor;
+  }
+}
+
+#toggle {
+  background-color: $mainTextColor;
+  label {
+    background-color: $transparentHoverColor;
+    font-family: $fontStyle;
+    color: $toggleLight;
+  }
+  input:checked + label {
+    background-color: $toggleDark;
+  }
+}
