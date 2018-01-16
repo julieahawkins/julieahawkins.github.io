@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router';
 import Nav from './Nav/Nav';
 import './styles/AppThemes.css';
   
@@ -34,6 +35,18 @@ class App extends Component {
   }
 
   render() {
+
+  /*{ <div className="App">
+          <Header />
+          <main>
+            <Switch>
+              <Route path="/projects" component={Projects} />
+              <Route path="/blogs" component={Blogs} />
+              <Route path="/" component={Home} />
+            </Switch>
+          </main>
+        </div> }*/
+
     const dark = this.state.theme === 'light' 
       ? null
       : 'dark';

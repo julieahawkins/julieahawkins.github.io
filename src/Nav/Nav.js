@@ -2,9 +2,10 @@ import React from 'react';
 import Moth from '../Moth/Moth';
 
 const Nav = ({ angle, theme, handleHover, handleBlur }) => {
-  const dark = theme === 'light' 
-      ? null
-      : 'dark';
+  const dark = theme === 'dark' 
+      ? 'dark'
+      : null;
+      
   return (
     <div className={`Nav ${dark}`}>
       <span 
