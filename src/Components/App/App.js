@@ -6,13 +6,13 @@ import Resume from '../Resume/Resume';
 import '../../styles/AppThemes.css';
   
 const App = () => {
-  return(
+  return (
     <Switch>
       <Route path="/projects" component={Projects} />
       <Route path="/resume" component={Resume} />
       <Route path="/" component={Home} />
     </Switch>
-  )
+  );
 };
 
 export default App;

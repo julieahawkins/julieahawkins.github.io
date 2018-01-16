@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { setThemeClass } from '../../helpers/helper';
 import Contact from '../Contact/Contact';
 import Nav from '../Nav/Nav';
@@ -7,12 +8,12 @@ class Home extends Component {
   constructor() {
     super();
     this.state = {
-      theme: 'light',
+      theme: 'light'
     };
   }
 
-  toggleTheme = (e) => {
-    const theme = !e.target.checked ? 'light' : 'dark';
+  toggleTheme = (event) => {
+    const theme = !event.target.checked ? 'light' : 'dark';
     this.setState({ theme });
   }
 
@@ -41,5 +42,9 @@ class Home extends Component {
     );
   }
 }
+
+Home.propTypes = {
+  location: PropTypes.object
+};
 
 export default Home;

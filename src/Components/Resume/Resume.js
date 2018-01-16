@@ -1,9 +1,10 @@
 import React from 'react';
-import Nav from '../Nav/Nav';
+import PropTypes from 'prop-types';
 import Contact from '../Contact/Contact';
+import Nav from '../Nav/Nav';
 
 const Resume = ({ location }) => {
-  return(
+  return (
     <div className='App'>
       <Nav 
         theme='light'
@@ -13,7 +14,11 @@ const Resume = ({ location }) => {
       <h1>I will be a resume page!</h1>
       <Contact />
     </div>
-  )
+  );
+};
+
+Resume.propTypes = {
+  location: PropTypes.object
 };
 
 export default Resume;
