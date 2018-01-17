@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { setThemeClass } from '../../helpers/helper';
@@ -8,35 +9,33 @@ class Nav extends Component {
     super(props);
 
     this.state = {
-      angle: null,
-      navBar: false
+      angle: null
     };
   }
 
   componentDidMount() {
     const { navBar } = this.props;
     if (navBar) {
-      this.setState({ navBar });
       this.handleMoth();
     }
   }
 
-  setAngle = (conditional) => {
-    const angle = conditional ? 'left' : 'right';
+  setAngle = (angleLeft) => {
+    const angle = angleLeft ? 'left' : 'right';
 
     this.setState({ angle });
   }
 
   handleHover = (event) => {
-    const conditional = (event.target.id === 'toProjects');
+    const angleLeft = (event.target.id === 'toProjects');
 
-    this.setAngle(conditional);
+    this.setAngle(angleLeft);
   }
 
   handleMoth = () => {
-    const conditional = (this.props.pageName === '/projects');
+    const angleLeft = (this.props.pageName === '/projects');
 
-    this.setAngle(conditional);
+    this.setAngle(angleLeft);
   }
 
   handleBlur = () => {
@@ -57,38 +56,54 @@ class Nav extends Component {
 
   render() {
     const { angle } = this.state;
-    const { theme } = this.props;
+    const { theme, navBar } = this.props;
 
     const navClass = this.addNavBarClass('Nav');
     const navLinkClass = this.addNavBarClass('nav-link');
-    const mothClass = this.addNavBarClass(angle);
 
+    const mothClass = this.addNavBarClass(angle);
     const mothStyle = theme === 'light' 
       ? require('../../assets/moth.png')
       : require('../../assets/moth-glow.png');
-        
+
+    const mothLink = 
+      <NavLink 
+        exact to='/'
+        className='home-link'>
+        <img 
+          id='Moth' 
+          alt='moth'
+          src={mothStyle}
+          className={mothClass} 
+        />
+        <span className='home-label'> HOME </span>
+      </NavLink>;
+
+    const bigMoth = 
+      <img 
+        id='Moth' 
+        alt='moth'
+        src={mothStyle}
+        className={mothClass} />;
+    
+    const moth = navBar ? mothLink : bigMoth;
+
     return (
       <nav className={setThemeClass(theme, navClass)}>
         <NavLink
           to='/projects' 
-          onMouseOver={this.handleHover}
-          onMouseOut={this.handleBlur}
           id='toProjects' 
+          onMouseOut={this.handleBlur}
+          onMouseOver={this.handleHover}
           className={setThemeClass(theme, navLinkClass)}>
           Projects
         </NavLink>
-        <NavLink exact to='/'>
-          <img 
-            src={mothStyle}
-            alt='moth'
-            className={mothClass} 
-            id='Moth' />
-        </NavLink>
+        {moth}
         <NavLink
           to='/resume' 
-          onMouseOver={this.handleHover}
-          onMouseOut={this.handleBlur}
           id='toResume' 
+          onMouseOut={this.handleBlur}
+          onMouseOver={this.handleHover}
           className={setThemeClass(theme, navLinkClass)}>
           Resume
         </NavLink>
@@ -97,10 +112,13 @@ class Nav extends Component {
   }
 }
 
+const mapStateToProps = ({ theme }) => ({ theme });
+
+export default connect(mapStateToProps, null)(Nav);
+
 Nav.propTypes = {
   navBar: PropTypes.bool,
   theme: PropTypes.string,
   pageName: PropTypes.string
 };
 
-export default Nav;
