@@ -1,50 +1,35 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { setThemeClass } from '../../helpers/helper';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import Contact from '../Contact/Contact';
 import Nav from '../Nav/Nav';
   
-class Home extends Component {
-  constructor() {
-    super();
-    this.state = {
-      theme: 'light'
-    };
-  }
+const Home = ({ location, theme }) => {
+  return (
+    <div className={setThemeClass(theme, 'App')}>
+      <Nav pageName={location.pathname} />
 
-  toggleTheme = (event) => {
-    const theme = !event.target.checked ? 'light' : 'dark';
-    this.setState({ theme });
-  }
+      <h1 className={theme}>
+        Julie Hawkins
+      </h1>
+      <span className={setThemeClass(theme, 'sub-title')}>
+        Software Developer
+      </span>
 
-  render() {
-    const { theme } = this.state;
+      <Contact />
 
-    return (
-      <div className={setThemeClass(theme, 'App')}>
-        <Nav 
-          theme={theme} 
-          pageName={this.props.location.pathname} />
-
-        <h1 className={theme}>Julie Hawkins</h1>
-        <span className={setThemeClass(theme, 'sub-title')}>Software Developer</span>
-
-        <Contact theme={theme} />
-
-        <div className='toggle-wrapper'>
-          <span id='toggle' className={theme}>
-            <input type='checkbox' onChange={this.toggleTheme}/>
-            <label data-on='dark' data-off='light'></label>
-          </span>
-        </div>
-
-      </div>
-    );
-  }
-}
-
-Home.propTypes = {
-  location: PropTypes.object
+      <ThemeToggle />
+    </div>
+  );
 };
 
-export default Home;
+const mapStateToProps = ({ theme }) => ({ theme });
+
+export default connect(mapStateToProps, null)(Home);
+
+Home.propTypes = {
+  theme: PropTypes.string,
+  location: PropTypes.object
+};

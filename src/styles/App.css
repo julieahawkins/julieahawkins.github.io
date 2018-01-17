@@ -22,7 +22,7 @@ body {
   width: 600px; }
 
 .Nav.navBar {
-  justify-content: center;
+  justify-content: space-around;
   padding: 15px;
   position: absolute;
   top: 0;
@@ -146,10 +146,10 @@ h1 {
     -moz-transform: rotateZ(360deg);
     transform: rotateZ(360deg); }
 
-.toggle-wrapper {
-  position: absolute;
+.ThemeToggle {
   bottom: 15px;
-  left: 15px; }
+  left: 15px;
+  position: absolute; }
 
 #toggle {
   display: inline-block;
@@ -182,3 +182,41 @@ h1 {
     content: attr(data-on); }
   #toggle input:checked + label {
     margin-left: 20px; }
+
+.EmailForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%; }
+
+.form-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 570px;
+  width: 770px; }
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px; }
+  .email-form input,
+  .email-form textarea {
+    border: none;
+    margin: 20px;
+    padding: 5px;
+    font-size: 16pt;
+    width: 460px; }
+  .email-form textarea {
+    height: 120px; }
+  .email-form input.submit-btn {
+    border-radius: 50px;
+    width: 470px;
+    -webkit-transition: 0.7s ease-out;
+    -moz-transition: 0.7s ease-out;
+    transition: 0.7s ease-out; }

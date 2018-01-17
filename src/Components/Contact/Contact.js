@@ -1,13 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { displayForm } from '../../actions';
 import { setThemeClass } from '../../helpers/helper';
 
-const Contact = ({ theme }) => {
-  const displayForm = () => {
-    console.log('email form would pop up');
-    alert('email form would pop up');
-  };
-
+const Contact = ({ theme, displayForm }) => {
   return (
     <div className='Contacts'>
       <a 
@@ -17,7 +14,7 @@ const Contact = ({ theme }) => {
         <div className={setThemeClass(theme, 'github')}></div>
       </a>
       <button
-        onClick={displayForm} 
+        onClick={displayForm}
         className={setThemeClass(theme, 'email')}>
       </button>
       <a 
@@ -30,8 +27,15 @@ const Contact = ({ theme }) => {
   );
 };
 
-Contact.propTypes = {
-  theme: PropTypes.string
-};
+const mapStateToProps = ({ theme }) => ({ theme });
 
-export default Contact;
+const mapDispatchToProps = dispatch => ({
+  displayForm: () => dispatch(displayForm())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Contact);
+
+Contact.propTypes = {
+  theme: PropTypes.string,
+  displayForm: PropTypes.func
+};
