@@ -11,7 +11,8 @@ class EmailForm extends Component {
       name: '',
       email: '', 
       message: '',
-      renderClose: false
+      renderClose: false,
+      submitError: false
     }
   }
 
@@ -25,12 +26,21 @@ class EmailForm extends Component {
     event.preventDefault();
 
     const { name, email, message } = this.state;
-    const submitData = {name, email, message};
-    //submit data via nodemailer;
-    console.log('submit', submitData);
+    if (email && message) {
+      const submitData = {name, email, message};
+      //submit data via nodemailer;
+      console.log('submit', submitData);
 
-    this.resetForm();
-    this.displayFormClose();
+      this.resetForm();
+      this.displayFormClose();
+    } else {
+      console.log('error')
+      this.displayError();
+    }
+  }
+
+  displayError = () => {
+    this.setState({ submitError: true });
   }
 
   displayFormClose = () => {
@@ -43,7 +53,8 @@ class EmailForm extends Component {
     this.setState({
       name: '',
       email: '', 
-      message: ''
+      message: '',
+      submitError: false
     });
   };
 
@@ -52,6 +63,9 @@ class EmailForm extends Component {
       <form 
         className='email-form' 
         onSubmit={this.handleSubmit}>
+        <div
+          onClick={this.props.closeForm} 
+          className='close-x'></div>
         <input 
           className='name-input'
           value={this.state.name}
@@ -72,13 +86,13 @@ class EmailForm extends Component {
           className='message-input'
           value={this.state.message}
           name='message' 
-          placeholder='Enter Message'
+          placeholder='Enter Message: CURRENTLY THIS FORM WILL NOT SEND AN ACTUAL EMAIL'
           onChange={this.handleChange} 
         />
-        <input 
+        <input
           className='submit-btn'
           type='submit' 
-          value='Send Email' 
+          value='Send Email'
         />
       </form>;
 
@@ -97,10 +111,15 @@ class EmailForm extends Component {
       ? closingForm
       : emailForm;
 
+    const errorMsg = this.state.submitError
+      ? <p className='error-msg'>&#9888; Please enter a valid email address and message! &#9888;</p>
+      : null;
+
     return (
       <div className='EmailForm'>
         <div className='form-wrapper'>
           {displayForm}
+          {errorMsg}
         </div>
       </div>
     )

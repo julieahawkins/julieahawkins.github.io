@@ -1,5 +1,10 @@
-/* Base layout, fonts and transitions */
+/* colors */
+@import './variables.scss';
 
+/* DARK THEME */
+@import './AppThemes.css';
+
+/* LIGHT THEME - default */
 body {
   box-sizing: border-box;
   margin: 0px;
@@ -7,11 +12,15 @@ body {
 }
 
 .App {
+  background: $backgroundColor;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   min-height: 100vh;
+
   -webkit-transition: 0.5s ease-out;
   -moz-transition:  0.5s ease-out;
   transition:  0.5s ease-out;
@@ -21,28 +30,50 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   margin-bottom: 50px;
   width: 600px;
 }
 
 .Nav.navBar {
+  border-bottom: 2px solid $mainTextColor;
+
   justify-content: space-around;
-  padding: 15px;
   position: absolute;
+  
+  padding: 15px;
   top: 0;
   width: 80%;
 }
 
 .nav-link {
   border-radius: 50px;
+  color: $mainTextColor;
   cursor: pointer;
+  font-family: $fontStyle;
   font-size: 20pt;
   font-weight: 100;
   text-decoration: none;
+
   padding: 10px;
+  
   -webkit-transition: 1s ease-out;
   -moz-transition:  1s ease-out;
   transition:  1s ease-out;
+  &:hover {
+    box-shadow: 0 0 70px 15px $shadowColor;
+    color: $hoverColor;
+  }
+}
+
+.nav-link.active {
+  background: $transparentHoverColor;
+  color: $backgroundColor;
+  &:hover {
+    background: none;
+    box-shadow: 0 0 70px 15px $shadowColor;
+    color: $hoverColor;
+  }
 }
 
 .nav-link.navBar {
@@ -50,9 +81,24 @@ body {
   margin: 0 100px;
 }
 
+.home-link {
+  color: $backgroundColor;
+  font-family: $fontStyle;
+  font-weight: 900;
+  text-decoration: none; 
+  text-shadow: 0 0 15px $hoverColor;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
 #Moth {
   height: 120px;
   width: 120px;
+
   -webkit-transition: 2s ease-out;
   -moz-transition:  2s ease-out;
   transition:  2s ease-out;
@@ -95,52 +141,65 @@ body {
 }
 
 h1 {
+  border-bottom: 3px solid $mainTextColor;
+  color: $mainTextColor;
+  font-family: $fontStyle;
   font-size: 40pt;
   font-weight: 900;
   text-align: center;
+
   padding: 25px;
   margin: 25px;
   width: 600px;
+
   -webkit-transition: 0.5s ease-out;
   -moz-transition:  0.5s ease-out;
   transition:  0.5s ease-out;
 }
 
 .sub-title {
-  display: block;
+  color: $mainTextColor;
+  font-family: $fontStyle;
   font-size: 20pt;
+
+  display: block;
+
   margin: 0;
 }
 
 .Contacts {
+  position: relative;
+
   margin-top: 130px;
   width: 300px;
-  position: relative;
 }
 
 .github {
-  background-image: url('../assets/github.svg');
+  background-image: url('../assets/github-icons/github.svg');
+
   left: 20px;
   &:hover {
-    background-image: url('../assets/github-hover.svg')
+    background-image: url('../assets/github-icons/github-hover.svg')
   } 
 }
 
 .email {
-  background-color: transparent;
+  background: transparent;
+  background-image: url('../assets/email-icons/email.svg');
   border: none;
-  background-image: url('../assets/email.svg');
+
   right: 130px;
   &:hover {
-    background-image: url('../assets/email-hover.svg')
+    background-image: url('../assets/email-icons/email-hover.svg')
   } 
 }
 
 .linkedIn {
-  background-image: url('../assets/linkedIn.svg');
+  background-image: url('../assets/linkedIn-icons/linkedIn.svg');
   right: 20px;
+
   &:hover {
-    background-image: url('../assets/linkedIn-hover.svg')
+    background-image: url('../assets/linkedIn-icons/linkedIn-hover.svg')
   } 
 }
 
@@ -152,16 +211,21 @@ h1 {
   background-size: contain;
   border-radius: 100%;
   cursor: pointer;
+
+  position: absolute;
+
   height: 40px;
   width: 40px;
-  position: absolute;
+
   -webkit-transition: 1s ease-out;
   -moz-transition:  1s ease-out;
   transition:  1s ease-out;
   &:hover {
+    // box-shadow: 0 0 70px 15px $shadowColor;
     height: 50px;
-    width: 50px;
     margin: -10px;
+    width: 50px;
+
     -webkit-transform: rotateZ(360deg);
     -moz-transform: rotateZ(360deg);
     transform: rotateZ(360deg);
@@ -175,31 +239,42 @@ h1 {
 }
 
 #toggle {
+  background-color: $mainTextColor;
+  border-radius: 20px;
+  text-align: left;
+
   display: inline-block;
   position: relative;
-  text-align: left;
-  width: 80px;
-  border-radius: 20px;
+  
   margin: 10px;
+  width: 80px;
   input {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     cursor: pointer;
     opacity: 0;
+
+    position: absolute;
     z-index: 2;
+
+    width: 100%;
+    height: 100%;
   }
   label {
+    background-color: $transparentHoverColor;
     border-radius: 50px;
-    display: inline-block;
-    width: 40px;
-    text-align: center;
+    color: $toggleLight;
+    font-family: $fontStyle;
     font-size: 12pt;
     font-weight: bold;
+    text-align: center;
+    
+    display: inline-block;
+
+    padding: 5px 10px;
+    width: 40px;
+
     -webkit-transition: margin-left 0.2s ease-in-out;
     -moz-transition: margin-left 0.2s ease-in-out;
     transition: margin-left 0.2s ease-in-out;
-    padding: 5px 10px;
     &:before {
       content: attr(data-off);
     }
@@ -209,6 +284,7 @@ h1 {
   }
 
   input:checked + label {
+    background-color: $toggleDark;
     margin-left: 20px;
   }
 }
@@ -219,44 +295,137 @@ h1 {
   justify-content: center;
   position: absolute;
   top: 0;
+
   height: 100%;
   width: 100%;
 }
 
 .form-wrapper {
+  background: $backgroundColor;
+  border: 30px solid $hoverColor;
+
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+
   height: 570px;
   width: 770px;
+  .error-msg {
+    color: $errorColor;
+    font-family: $fontStyle;
+    font-size: 20pt;
+    font-weight: 900;
+    
+    align-self: center;
+    position: absolute;
+    bottom: -10px;
+  }
 }
 
 .email-form {
+  background: $transparentHoverColor;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   padding: 15px;
   input,
   textarea {
     border: none;
-    margin: 20px;
-    padding: 5px;
     font-size: 16pt;
+    
+    padding: 5px;
+    margin: 20px;
     width: 460px;
   }
   textarea {
     height: 120px;
+    resize: none;
   }
   input.submit-btn {
+    background: $backgroundColor;
     border-radius: 50px;
+    color: $hoverColor;
+    cursor: pointer;
+
     width: 470px;
+
     -webkit-transition: 0.7s ease-out;
     -moz-transition:  0.7s ease-out;
     transition:  0.7s ease-out;
+    &:hover {
+      background: $hoverColor;
+      color: $backgroundColor;
+    }
+  }
+}
+
+.close-x {
+  background-image: url('../assets/close-icons/close.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 100%;
+  cursor: pointer;
+
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  height: 40px;
+  width: 40px;
+  &:hover {
+    background-image: url('../assets/close-icons/close-hover.svg');
   }
 }
 
 .closing-form {
+  font-family: $fontStyle;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  width: 100%;
+  h5 {
+    color: $hoverColor;
+    font-size: 50pt;
+
+    margin: 0;
+  }
+  p {
+    color: $mainTextColor;
+    font-size: 20pt;
+
+    margin: 30px;
+  }
+}
+
+.close-btn {
+  background: $transparentHoverColor;
+  border: none;
+  border-radius: 50px;
+  color: $backgroundColor;
+  cursor: pointer;
+  font-family: $fontStyle;
+  font-size: 18pt;
+  font-weight: 100;
+  text-decoration: none;
+
+  padding: 10px;
+  margin: 10px;
+  
+  -webkit-transition: 0.7s ease-out;
+  -moz-transition:  0.7s ease-out;
+  transition:  0.7s ease-out;
+  &:hover {
+    background: none;
+    box-shadow: 0 0 70px 15px $shadowColor;
+    color: $hoverColor;
+  }
 }
