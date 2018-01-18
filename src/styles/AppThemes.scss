@@ -18,6 +18,11 @@
   }
 }
 
+.home-link.dark {
+  color: $backgroundColor-Dark;
+  text-shadow: 0 0 15px $hoverColor-Dark;
+}
+
 h1.dark {
   border: none;
   border-bottom: 3px solid $mainTextColor-Dark;

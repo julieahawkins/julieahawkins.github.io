@@ -1,12 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { setThemeClass } from '../../helpers/helper';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import Contact from '../Contact/Contact';
 import Nav from '../Nav/Nav';
 
-const Resume = ({ location }) => {
+const Resume = ({ location, theme }) => {
   return (
-    <div className='App'>
+    <div className={setThemeClass(theme, 'App')}>
       <Nav 
         navBar={true} 
         pageName={location.pathname}
@@ -29,8 +31,11 @@ const Resume = ({ location }) => {
   );
 };
 
-Resume.propTypes = {
-  location: PropTypes.object
-};
+const mapStateToProps = ({ theme }) => ({ theme });
 
-export default Resume;
+export default connect(mapStateToProps, null)(Resume);
+
+Resume.propTypes = {
+  location: PropTypes.object,
+  theme: PropTypes.string
+};

@@ -18,6 +18,10 @@
     box-shadow: 0 0 70px 15px rgba(196, 241, 190, 0.7);
     color: #C4F1BE; }
 
+.home-link.dark {
+  color: #020C31;
+  text-shadow: 0 0 15px #C4F1BE; }
+
 h1.dark {
   border: none;
   border-bottom: 3px solid #4A6846;
