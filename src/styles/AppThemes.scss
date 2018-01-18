@@ -1,96 +1,6 @@
-@import './App.css';
 @import '../styles/variables.scss';
 
-/* LIGHT THEME - default */
-.App {
-  background: $backgroundColor;
-}
-
-.Nav.navBar {
-  border-bottom: 2px solid $mainTextColor;
-}
-
-.nav-link {
-  font-family: $fontStyle;
-  color: $mainTextColor;
-  &:hover {
-    color: $hoverColor;
-    box-shadow: 0 0 70px 15px $shadowColor;
-  }
-}
-
-.nav-link.active {
-  background: $transparentHoverColor;
-  color: $backgroundColor;
-  &:hover {
-    background: none;
-    box-shadow: 0 0 70px 15px $shadowColor;
-    color: $hoverColor;
-  }
-}
-
-.home-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: $backgroundColor;
-  font-family: $fontStyle;
-  font-weight: 900;
-  text-decoration: none; 
-  text-shadow: 0 0 15px $hoverColor;
-  position: relative;
-}
-
-h1 {
-  border-bottom: 3px solid $mainTextColor;
-  color: $mainTextColor;
-  font-family: $fontStyle;
-}
-
-.sub-title {
-  color: $mainTextColor;
-  font-family: $fontStyle;
-}
-
-.github,
-.linkedIn,
-.email {
-  &:hover {
-    box-shadow: 0 0 70px 15px $shadowColor;
-  }
-}
-
-#toggle {
-  background-color: $mainTextColor;
-  label {
-    background-color: $transparentHoverColor;
-    font-family: $fontStyle;
-    color: $toggleLight;
-  }
-  input:checked + label {
-    background-color: $toggleDark;
-  }
-}
-
-.form-wrapper {
-  border: 30px solid $hoverColor;
-  background: $backgroundColor;
-}
-
-.email-form {
-  background: $transparentHoverColor;
-  input.submit-btn {
-    background: $backgroundColor;
-    &:hover {
-      background: $hoverColor;
-      color: $backgroundColor;
-    }
-  }
-}
-
 /* DARK THEME */
-
 .App.dark {
   background: $backgroundColor-Dark;
 }
@@ -100,21 +10,21 @@ h1 {
 }
 
 .nav-link.dark {
-  font-family: $fontStyle;
   color: $mainTextColor-Dark;
+  font-family: $fontStyle;
   &:hover {
-    color: $hoverColor-Dark;
     box-shadow: 0 0 70px 15px $shadowColor-Dark;
+    color: $hoverColor-Dark;
   }
 }
 
 h1.dark {
+  border: none;
   border-bottom: 3px solid $mainTextColor-Dark;
   color: $backgroundColor-Dark;
   font-family: $fontStyle;
   font-size: 70pt;
   text-shadow: $shadowColor-Dark 0 0 30px;
-  border: none;
 }
 
 .sub-title.dark {
@@ -122,29 +32,29 @@ h1.dark {
 }
 
 .github.dark {
-  background-image: url('../assets/github-dark.svg');
+  background-image: url('../assets/github-icons/github-dark.svg');
   &:hover {
-    background-image: url('../assets/github-dark-hover.svg')
+    background-image: url('../assets/github-icons/github-dark-hover.svg')
   } 
 }
 
 .email.dark {
-  background-image: url('../assets/email-dark.svg');
+  background-image: url('../assets/email-icons/email-dark.svg');
   &:hover {
-    background-image: url('../assets/email-dark-hover.svg')
+    background-image: url('../assets/email-icons/email-dark-hover.svg')
   } 
 }
 
 .linkedIn.dark {
-  background-image: url('../assets/linkedIn-dark.svg');
+  background-image: url('../assets/linkedIn-icons/linkedIn-dark.svg');
   &:hover {
-    background-image: url('../assets/linkedIn-dark-hover.svg')
+    background-image: url('../assets/linkedIn-icons/linkedIn-dark-hover.svg')
   } 
 }
 
 .github.dark,
-.linkedIn.dark
-.email.dark {
+.email.dark,
+.linkedIn.dark {
   &:hover {
     box-shadow: 0 0 70px 15px $shadowColor-Dark;
   }
@@ -155,8 +65,8 @@ h1.dark {
   label {
     background-color: $hoverColor-Dark;
     box-shadow: 0 0 20px 1px $shadowColor-Dark;
-    font-family: $fontStyle;
     color: $toggleLight;
+    font-family: $fontStyle;
   }
   input:checked + label {
     background-color: $toggleDark;

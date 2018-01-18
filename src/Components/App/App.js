@@ -5,7 +5,7 @@ import EmailForm from '../EmailForm/EmailForm';
 import Projects from '../Projects/Projects';
 import Resume from '../Resume/Resume';
 import Home from '../Home/Home';
-import '../../styles/AppThemes.css';
+import '../../styles/App.css';
   
 const App = ({ renderForm }) => {
   const emailForm = renderForm
