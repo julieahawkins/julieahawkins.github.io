@@ -406,7 +406,8 @@ h1 {
   }
 }
 
-.close-btn {
+.close-btn,
+.resume {
   background: $transparentHoverColor;
   border: none;
   border-radius: 50px;
@@ -416,6 +417,7 @@ h1 {
   font-size: 18pt;
   font-weight: 100;
   text-decoration: none;
+  // text-align: center;
 
   padding: 10px;
   margin: 10px;
@@ -428,4 +430,8 @@ h1 {
     box-shadow: 0 0 70px 15px $shadowColor;
     color: $hoverColor;
   }
+}
+
+.resume {
+
 }

@@ -71,7 +71,7 @@ class EmailForm extends Component {
           value={this.state.name}
           name='name' 
           type='text' 
-          placeholder='Enter Name' 
+          placeholder='Your Name' 
           onChange={this.handleChange} 
         />
         <input 
@@ -79,14 +79,14 @@ class EmailForm extends Component {
           value={this.state.email}
           name='email' 
           type='email' 
-          placeholder='Enter Email' 
+          placeholder='Your Email' 
           onChange={this.handleChange} 
         />
         <textarea 
           className='message-input'
           value={this.state.message}
           name='message' 
-          placeholder='Enter Message: CURRENTLY THIS FORM WILL NOT SEND AN ACTUAL EMAIL'
+          placeholder='Your Message: CURRENTLY THIS FORM WILL NOT SEND AN ACTUAL EMAIL'
           onChange={this.handleChange} 
         />
         <input
