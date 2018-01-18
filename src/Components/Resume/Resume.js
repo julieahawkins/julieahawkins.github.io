@@ -11,7 +11,18 @@ const Resume = ({ location }) => {
         navBar={true} 
         pageName={location.pathname}
       />
+      
       <h1>I will be a resume page!</h1>
+      
+      <a 
+        target='_blank' 
+        className='resume'
+        rel='noopener noreferrer'
+        href='https://www.turing.io/sites/default/files/resumes/JulieHawkinsResume.pdf'>
+        To Resume
+      </a>
+
+      <h2>Have a question or want to work together?</h2>
       <Contact />
       <ThemeToggle />
     </div>
