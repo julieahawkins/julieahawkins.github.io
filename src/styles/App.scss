@@ -221,7 +221,7 @@ h1 {
   -moz-transition:  1s ease-out;
   transition:  1s ease-out;
   &:hover {
-    // box-shadow: 0 0 70px 15px $shadowColor;
+    box-shadow: 0 0 70px 15px $shadowColor;
     height: 50px;
     margin: -10px;
     width: 50px;

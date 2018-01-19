@@ -69,14 +69,14 @@ class Nav extends Component {
     const mothLink = 
       <NavLink 
         exact to='/'
-        className='home-link'>
+        className={setThemeClass(theme, 'home-link')}>
         <img 
           id='Moth' 
           alt='moth'
           src={mothStyle}
           className={mothClass} 
         />
-        <span className='home-label'> HOME </span>
+        <span> HOME </span>
       </NavLink>;
 
     const bigMoth = 
