@@ -180,6 +180,7 @@ h1 {
   .github:hover,
   .linkedIn:hover,
   .email:hover {
+    box-shadow: 0 0 70px 15px rgba(201, 201, 205, 0.7);
     height: 50px;
     margin: -10px;
     width: 50px;

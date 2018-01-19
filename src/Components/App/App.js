@@ -17,7 +17,7 @@ const App = ({ renderForm }) => {
       <Switch>
         <Route path='/projects' component={Projects} />
         <Route path='/resume' component={Resume} />
-        <Route path='/' component={Home} />
+        <Route exact path='/' component={Home} />
       </Switch>
       {emailForm}
     </main>
