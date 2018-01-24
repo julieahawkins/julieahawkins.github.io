@@ -6,7 +6,7 @@ import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import Contact from '../Contact/Contact';
 import Nav from '../Nav/Nav';
 
-const Resume = ({ location, theme }) => {
+const AboutMe = ({ location, theme }) => {
   return (
     <div className={setThemeClass(theme, 'App')}>
       <Nav 
@@ -14,17 +14,19 @@ const Resume = ({ location, theme }) => {
         pageName={location.pathname}
       />
       
-      <h1>I will be a resume page!</h1>
-      
+      <h2>About Me</h2>
+      <p>I am a software developer, currently at Turing School for Software and Design learning Front-End technologies.
+      I love to solve problems and puzzles, 
+      I live in Denver, CO with my husband Ben and pets Luigi, Luna and Neeko</p>      
+      <h2>Have a question or want to work together?</h2>
       <a 
         target='_blank' 
         className='resume'
         rel='noopener noreferrer'
         href='https://www.turing.io/sites/default/files/resumes/JulieHawkinsResume.pdf'>
-        To Resume
+        Resume
       </a>
 
-      <h2>Have a question or want to work together?</h2>
       <Contact />
       <ThemeToggle />
     </div>
@@ -33,9 +35,9 @@ const Resume = ({ location, theme }) => {
 
 const mapStateToProps = ({ theme }) => ({ theme });
 
-export default connect(mapStateToProps, null)(Resume);
+export default connect(mapStateToProps, null)(AboutMe);
 
-Resume.propTypes = {
+AboutMe.propTypes = {
   location: PropTypes.object,
   theme: PropTypes.string
 };

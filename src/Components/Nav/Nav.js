@@ -34,6 +34,7 @@ class Nav extends Component {
 
   handleMoth = () => {
     const angleLeft = (this.props.pageName === '/projects');
+    
 
     this.setAngle(angleLeft);
   }
@@ -100,12 +101,12 @@ class Nav extends Component {
         </NavLink>
         {moth}
         <NavLink
-          to='/resume' 
-          id='toResume' 
+          to='/about' 
+          id='toAboutMe' 
           onMouseOut={this.handleBlur}
           onMouseOver={this.handleHover}
           className={setThemeClass(theme, navLinkClass)}>
-          Resume
+          About Me
         </NavLink>
       </nav>
     );

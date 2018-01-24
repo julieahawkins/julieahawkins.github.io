@@ -11,6 +11,38 @@ body {
   padding: 0px;
 }
 
+/* temp email msg */
+.temp-msg {
+  background: $shadowColor;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  
+  height: 100%;
+  width: 100%;
+  p {
+    color: $errorColor;
+    font-family: $fontStyle;
+    font-size: 20pt;
+    font-weight: 900; 
+
+    padding: 10px;
+    margin: 35px auto;
+  }
+  button {
+    background: $errorColor;
+
+    margin: 35px;
+    &:hover {
+      box-shadow: 0 0 70px 15px $hoverColor;
+      color: $errorColor;
+    }
+  }
+}
+
 .App {
   background: $backgroundColor;
 
@@ -42,6 +74,7 @@ body {
   position: absolute;
   
   padding: 15px;
+  margin: 0;
   top: 0;
   width: 80%;
 }
@@ -78,7 +111,6 @@ body {
 
 .nav-link.navBar {
   font-size: 16pt;
-  margin: 0 100px;
 }
 
 .home-link {
@@ -164,13 +196,13 @@ h1 {
 
   display: block;
 
-  margin: 0;
+  margin: 0 0 200px 0;
 }
 
 .Contacts {
   position: relative;
 
-  margin-top: 130px;
+  // margin-top: 130px;
   width: 300px;
 }
 
@@ -417,7 +449,6 @@ h1 {
   font-size: 18pt;
   font-weight: 100;
   text-decoration: none;
-  // text-align: center;
 
   padding: 10px;
   margin: 10px;
@@ -432,6 +463,84 @@ h1 {
   }
 }
 
-.resume {
+.Projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  height: 600px;
+  min-width: 100%;
+  .project-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 10px;
+
+    // height: 70%;
+    // width: 70%;
+    img {
+      width: 700px;
+      max-height: 400px;
+    }
+  }
+  button {
+    background: none;
+    background-image: url('../assets/arrow-icons/arrow.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    height: 40px;
+    width: 40px;
+    &:hover {
+      background-image: url('../assets/arrow-icons/arrow-hover.svg');
+    }
+  }
+  #left {
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+  }
+  .project-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 10px;
+    width: 600px;
+    .repo-link {
+      color: $mainTextColor;
+      font-family: $fontStyle;
+      font-size: 16pt;
+      font-weight: 900;
+      text-decoration: none;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        color: $hoverColor;
+      }
+    }
+    .repo-icon {
+      background-image: url('../assets/github-icons/github.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      width: 30px;
+      height: 30px;
+      margin: 2px;
+      &:hover {
+        background-image: url('../assets/github-icons/github-hover.svg');
+      } 
+    }
+  }
 }
+
+

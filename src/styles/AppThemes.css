@@ -11,11 +11,22 @@
 .Nav.dark {
   margin-bottom: 10px; }
 
+.Nav.navBar.dark {
+  border-bottom: 2px solid #4A6846; }
+
 .nav-link.dark {
   color: #4A6846;
   font-family: "Jura", monospace; }
   .nav-link.dark:hover {
     box-shadow: 0 0 70px 15px rgba(196, 241, 190, 0.7);
+    color: #C4F1BE; }
+
+.nav-link.dark.active {
+  background: #4A6846;
+  color: #020C31;
+  font-weight: 900; }
+  .nav-link.dark.active:hover {
+    background: #020C31;
     color: #C4F1BE; }
 
 .home-link.dark {
@@ -61,3 +72,18 @@ h1.dark {
     font-family: "Jura", monospace; }
   #toggle.dark input:checked + label {
     background-color: #008; }
+
+.Projects.dark button {
+  background-image: url("../assets/arrow-icons/arrow-dark.svg"); }
+  .Projects.dark button:hover {
+    background-image: url("../assets/arrow-icons/arrow-dark-hover.svg"); }
+
+.Projects.dark .project-links .repo-icon.dark {
+  background-image: url("../assets/github-icons/github-dark.svg"); }
+  .Projects.dark .project-links .repo-icon.dark:hover {
+    background-image: url("../assets/github-icons/github-dark-hover.svg"); }
+
+.Projects.dark .project-links .repo-link.dark {
+  color: #4A6846; }
+  .Projects.dark .project-links .repo-link.dark:hover {
+    color: #C4F1BE; }
