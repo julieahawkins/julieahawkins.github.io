@@ -1,8 +1,12 @@
 {
-  "main.css": "static/css/main.42254e0b.css",
-  "main.css.map": "static/css/main.42254e0b.css.map",
-  "main.js": "static/js/main.614aea0a.js",
-  "main.js.map": "static/js/main.614aea0a.js.map",
+  "main.css": "static/css/main.4fb10b54.css",
+  "main.css.map": "static/css/main.4fb10b54.css.map",
+  "main.js": "static/js/main.40c5760e.js",
+  "main.js.map": "static/js/main.40c5760e.js.map",
+  "static/media/arrow-dark-hover.svg": "static/media/arrow-dark-hover.0eb0d958.svg",
+  "static/media/arrow-dark.svg": "static/media/arrow-dark.3290328d.svg",
+  "static/media/arrow-hover.svg": "static/media/arrow-hover.b85b7cfa.svg",
+  "static/media/arrow.svg": "static/media/arrow.b35cffe2.svg",
   "static/media/close-hover.svg": "static/media/close-hover.74199273.svg",
   "static/media/close.svg": "static/media/close.f40943b8.svg",
   "static/media/email-dark-hover.svg": "static/media/email-dark-hover.35e72913.svg",
@@ -13,10 +17,13 @@
   "static/media/github-dark.svg": "static/media/github-dark.568c7be9.svg",
   "static/media/github-hover.svg": "static/media/github-hover.30b5c873.svg",
   "static/media/github.svg": "static/media/github.f0ed4eb6.svg",
+  "static/media/iOS-view.png": "static/media/iOS-view.a0873fd3.png",
   "static/media/linkedIn-dark-hover.svg": "static/media/linkedIn-dark-hover.4abce8a3.svg",
   "static/media/linkedIn-dark.svg": "static/media/linkedIn-dark.a218abd1.svg",
   "static/media/linkedIn-hover.svg": "static/media/linkedIn-hover.3519d805.svg",
   "static/media/linkedIn.svg": "static/media/linkedIn.9973a7f0.svg",
+  "static/media/meteor-defense-start.png": "static/media/meteor-defense-start.7a9b526a.png",
   "static/media/moth-glow.png": "static/media/moth-glow.b4d670d0.png",
-  "static/media/moth.png": "static/media/moth.c00cb6a0.png"
+  "static/media/moth.png": "static/media/moth.c00cb6a0.png",
+  "static/media/welcome-screen.png": "static/media/welcome-screen.4b8f65f2.png"
 }
