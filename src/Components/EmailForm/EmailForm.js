@@ -63,9 +63,8 @@ class EmailForm extends Component {
       <form 
         className='email-form' 
         onSubmit={this.handleSubmit}>
-        <div
-          onClick={this.props.closeForm} 
-          className='close-x'></div>
+        
+
         <input 
           className='name-input'
           value={this.state.name}
@@ -86,7 +85,7 @@ class EmailForm extends Component {
           className='message-input'
           value={this.state.message}
           name='message' 
-          placeholder='Your Message: CURRENTLY THIS FORM WILL NOT SEND AN ACTUAL EMAIL'
+          placeholder='Your Message'
           onChange={this.handleChange} 
         />
         <input
@@ -115,9 +114,24 @@ class EmailForm extends Component {
       ? <p className='error-msg'>&#9888; Please enter a valid email address and message! &#9888;</p>
       : null;
 
+    const temporaryMessage = 
+      <div className='temp-msg'>
+        <p>&#9888; This form is currently UNDER CONSTRUCTION! &#9888;</p>
+        <p>Please contact me at julabi@gmail.com</p>
+        <button 
+          onClick={this.props.closeForm}
+          className='close-btn'>
+          CLOSE
+        </button>
+      </div>;
+
     return (
       <div className='EmailForm'>
         <div className='form-wrapper'>
+          {temporaryMessage}
+          <div
+          onClick={this.props.closeForm} 
+          className='close-x'></div>
           {displayForm}
           {errorMsg}
         </div>

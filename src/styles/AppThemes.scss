@@ -9,11 +9,25 @@
   margin-bottom: 10px;
 }
 
+.Nav.navBar.dark {
+  border-bottom: 2px solid $mainTextColor-Dark;
+}
+
 .nav-link.dark {
   color: $mainTextColor-Dark;
   font-family: $fontStyle;
   &:hover {
     box-shadow: 0 0 70px 15px $shadowColor-Dark;
+    color: $hoverColor-Dark;
+  }
+}
+
+.nav-link.dark.active {
+  background: $mainTextColor-Dark;
+  color: $backgroundColor-Dark;
+  font-weight: 900;
+  &:hover {
+    background: $backgroundColor-Dark;
     color: $hoverColor-Dark;
   }
 }
@@ -74,6 +88,58 @@ h1.dark {
   }
   input:checked + label {
     background-color: $toggleDark;
+  }
+}
+
+.Projects.dark {
+  button {
+    background-image: url('../assets/arrow-icons/arrow-dark.svg');
+    &:hover {
+      background-image: url('../assets/arrow-icons/arrow-dark-hover.svg');
+    }
+  }
+  .project-links {
+    .repo-icon.dark {
+      background-image: url('../assets/github-icons/github-dark.svg');
+      &:hover {
+        background-image: url('../assets/github-icons/github-dark-hover.svg');
+      } 
+    }
+    .repo-link.dark {
+      color: $mainTextColor-Dark;
+      &:hover {
+        color: $hoverColor-Dark;
+      }
+    }
+  }
+}
+
+.About.dark {
+  h2 {
+    color: $subTextColor-Dark;
+    font-size: 35pt;
+  }
+  p {
+    color: $mainTextColor-Dark;
+  }
+  .resume-wrapper.dark {
+    h2 {
+      color: $subTextColor-Dark;
+      font-size: 20pt;
+    }
+    .resume-label.dark {
+      background: $shadowColor-Dark;
+      color: $backgroundColor-Dark;
+      .resume.dark {
+        background: $shadowColor-Dark;
+        color: $backgroundColor-Dark;
+        &:hover {
+          box-shadow: 0 0 70px 15px $shadowColor-Dark;
+          background: $backgroundColor-Dark;
+          color: $hoverColor-Dark;
+        }
+      }
+    }
   }
 }
 
