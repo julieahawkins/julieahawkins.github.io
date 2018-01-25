@@ -16,21 +16,21 @@ class Projects extends Component {
 
     this.projects = [
       {
+        title: 'Stella-Via',
+        image: require('../../assets/iOS-view.png'),
+        link: 'https://youtu.be/SO0-MmjgApo',
+        repo: 'https://github.com/katiescruggs/stella-via'
+      },
+      {
         title: 'Weathrly',
         image: require('../../assets/welcome-screen.png'),
         link: 'https://jpweathrly.surge.sh',
         repo: 'https://github.com/jessepackwood/weathrly'
       },
       {
-        title: 'Stella-Via',
-        image: require('../../assets/iOS-view.png'),
-        link: '',
-        repo: 'https://github.com/katiescruggs/stella-via'
-      },
-      {
         title: 'Meteor Defense',
-        image: require('../../assets/moth.png'),
-        link: '',
+        image: require('../../assets/meteor-defense-start.png'),
+        link: null,
         repo: 'https://github.com/julieahawkins/game-time'
       },
     ];
@@ -77,7 +77,7 @@ class Projects extends Component {
                 href={project.link} 
                 target='_blank' 
                 rel='noopener noreferrer'>
-                visit site
+                visit
               </a>
               <a 
                 className={setThemeClass(theme, 'repo-link')}

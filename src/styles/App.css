@@ -377,7 +377,7 @@ h1 {
     justify-content: center;
     margin: 10px; }
     .Projects .project-view img {
-      width: 700px;
+      max-width: 700px;
       max-height: 400px; }
   .Projects button {
     background: none;
