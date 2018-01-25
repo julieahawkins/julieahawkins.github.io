@@ -87,3 +87,25 @@ h1.dark {
   color: #4A6846; }
   .Projects.dark .project-links .repo-link.dark:hover {
     color: #C4F1BE; }
+
+.About.dark h2 {
+  color: rgba(255, 170, 104, 0.4);
+  font-size: 35pt; }
+
+.About.dark p {
+  color: #4A6846; }
+
+.About.dark .resume-wrapper.dark h2 {
+  color: rgba(255, 170, 104, 0.4);
+  font-size: 20pt; }
+
+.About.dark .resume-wrapper.dark .resume-label.dark {
+  background: rgba(196, 241, 190, 0.7);
+  color: #020C31; }
+  .About.dark .resume-wrapper.dark .resume-label.dark .resume.dark {
+    background: rgba(196, 241, 190, 0.7);
+    color: #020C31; }
+    .About.dark .resume-wrapper.dark .resume-label.dark .resume.dark:hover {
+      box-shadow: 0 0 70px 15px rgba(196, 241, 190, 0.7);
+      background: #020C31;
+      color: #C4F1BE; }

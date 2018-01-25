@@ -423,3 +423,43 @@ h1 {
       margin: 2px; }
       .Projects .project-links .repo-icon:hover {
         background-image: url("../assets/github-icons/github-hover.svg"); }
+
+.About {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  min-width: 100%; }
+  .About h2 {
+    color: #877D78;
+    font-family: "Jura", monospace;
+    font-weight: 900;
+    font-size: 30pt; }
+  .About p {
+    font-size: 14pt;
+    font-family: "Jura", monospace;
+    color: #877D78;
+    width: 50%; }
+  .About .resume-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .About .resume-wrapper h2 {
+      font-size: 16pt; }
+    .About .resume-wrapper .resume-label {
+      background: rgba(155, 145, 140, 0.7);
+      border: none;
+      border-radius: 50px;
+      color: #FAF9F6;
+      font-family: "Jura", monospace;
+      font-size: 18pt;
+      font-weight: 100;
+      padding: 10px;
+      padding-right: 0; }
+      .About .resume-wrapper .resume-label .resume {
+        margin-right: 0;
+        font-weight: 900; }
+        .About .resume-wrapper .resume-label .resume:hover {
+          background: #FAF9F6; }

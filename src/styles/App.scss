@@ -540,4 +540,53 @@ h1 {
   }
 }
 
+.About {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 600px;
+  min-width: 100%;
+  h2 {
+    color: $hoverColor;
+    font-family: $fontStyle;
+    font-weight: 900;
+    font-size: 30pt;
+  }
+  p {
+    font-size: 14pt;
+    font-family: $fontStyle;
+    color: $hoverColor;
+    width: 50%;
+  }
+  .resume-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      font-size: 16pt;
+    }
+    .resume-label {
+      background: $transparentHoverColor;
+      border: none;
+      border-radius: 50px;
+      color: $backgroundColor;
+      font-family: $fontStyle;
+      font-size: 18pt;
+      font-weight: 100;
+
+      padding: 10px;
+      padding-right: 0;
+      .resume {
+        margin-right: 0;
+        font-weight: 900;
+        &:hover {
+          background: $backgroundColor;
+        }
+      }
+    }
+  }
+}
 

@@ -13,19 +13,28 @@ const AboutMe = ({ location, theme }) => {
         navBar={true} 
         pageName={location.pathname}
       />
-      
-      <h2>About Me</h2>
-      <p>I am a software developer, currently at Turing School for Software and Design learning Front-End technologies.
-      I love to solve problems and puzzles, 
-      I live in Denver, CO with my husband Ben and pets Luigi, Luna and Neeko</p>      
-      <h2>Have a question or want to work together?</h2>
-      <a 
-        target='_blank' 
-        className='resume'
-        rel='noopener noreferrer'
-        href='https://www.turing.io/sites/default/files/resumes/JulieHawkinsResume.pdf'>
-        Resume
-      </a>
+      <section className={setThemeClass(theme, 'About')}>
+        
+        <h2>hello!</h2>
+        <p>I am a software developer, currently at Turing School for Software and Design learning Front-End technologies.
+        I love to solve problems and puzzles, 
+        I live in Denver, CO with my husband Ben and pets Luigi, Luna and Neeko.
+        </p>      
+        
+        <div className={setThemeClass(theme, 'resume-wrapper')}>
+          <h2>Have a question or want to work together?</h2>
+          <label className={setThemeClass(theme, 'resume-label')}>Checkout my 
+            <a 
+              target='_blank' 
+              className={setThemeClass(theme, 'resume')}
+              rel='noopener noreferrer'
+              href='https://www.turing.io/sites/default/files/resumes/JulieHawkinsResume.pdf'>
+              Resume
+            </a>
+          </label>
+        </div>
+
+      </section>
 
       <Contact />
       <ThemeToggle />
