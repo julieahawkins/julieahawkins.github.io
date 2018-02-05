@@ -28,7 +28,7 @@ const AboutMe = ({ location, theme }) => {
               target='_blank' 
               className={setThemeClass(theme, 'resume')}
               rel='noopener noreferrer'
-              href='https://www.turing.io/sites/default/files/resumes/JulieHawkinsResume.pdf'>
+              href='https://www.turing.io/sites/default/files/resumes/JulieHawkinsResume_0.pdf'>
               Resume
             </a>
           </label>
